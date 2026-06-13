@@ -1,0 +1,5 @@
+id: connect-file
+name: Apache Kafka Connect File plugin
+description: OCI artifacts with the Apache Kafka Connect File plugin.
+upstream: https://github.com/apache/kafka
+image: ghcr.io/oci-plugins-for-apache-kafka/connect-file

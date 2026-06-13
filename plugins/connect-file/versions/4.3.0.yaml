@@ -1,0 +1,8 @@
+version: 4.3.0
+images:
+  - id: default
+    tags:
+      - 4.3.0
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/kafka/connect-file/4.3.0/connect-file-4.3.0.jar
+        destination: /connect-file-4.3.0.jar

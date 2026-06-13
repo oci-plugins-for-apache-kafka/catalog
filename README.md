@@ -11,6 +11,7 @@ This organization is not part of the Apache Kafka project.
 |---|---|---|---|
 | [Aiven Tiered Storage plugins for Apache Kafka](plugins/aiven-tiered-storage/) | OCI artifacts with the Aiven tiered storage plugins for Apache Kafka. | `ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-filesystem`<br>`ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-s3`<br>`ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-gcs`<br>`ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage:1.1.1-azure` | [Upstream](https://github.com/Aiven-Open/tiered-storage-for-apache-kafka) |
 | [Amazon MSK Library for AWS Identity and Access Management](plugins/aws-msk-iam-auth/) | OCI artifacts with the Amazon MSK Library for AWS Identity and Access Management. | `ghcr.io/oci-plugins-for-apache-kafka/aws-msk-iam-auth:2.3.7` | [Upstream](https://github.com/aws/aws-msk-iam-auth) |
+| [Apache Kafka Connect File plugin](plugins/connect-file/) | OCI artifacts with the Apache Kafka Connect File plugin. | `ghcr.io/oci-plugins-for-apache-kafka/connect-file:4.3.0` | [Upstream](https://github.com/apache/kafka) |
 
 ## Catalog Model
 
