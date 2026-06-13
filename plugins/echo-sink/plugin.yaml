@@ -1,0 +1,6 @@
+id: echo-sink
+name: Kafka Connect plugin which logs messages into log
+description: OCI artifacts with the Echo Sink plugin.
+upstream: https://github.com/scholzj/echo-sink
+image: ghcr.io/oci-plugins-for-apache-kafka/echo-sink
+  

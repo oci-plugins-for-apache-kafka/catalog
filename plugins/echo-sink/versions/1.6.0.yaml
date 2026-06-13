@@ -1,0 +1,8 @@
+version: 1.6.0
+images:
+  - id: default
+    tags:
+      - 1.6.0
+    artifacts:
+      - url: https://github.com/scholzj/echo-sink/releases/download/1.6.0/echo-sink-1.6.0.jar
+        destination: /echo-sink-1.6.0.jar
