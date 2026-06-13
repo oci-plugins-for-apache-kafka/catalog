@@ -1,0 +1,8 @@
+version: 2.3.7
+images:
+  - id: default
+    tags:
+      - 2.3.7
+    artifacts:
+      - url: https://github.com/aws/aws-msk-iam-auth/releases/download/v2.3.7/aws-msk-iam-auth-2.3.7-all.jar
+        destination: /aws-msk-iam-auth-2.3.7-all.jar

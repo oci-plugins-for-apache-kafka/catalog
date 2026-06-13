@@ -1,0 +1,5 @@
+id: plugin-id
+name: Plugin Display Name
+description: OCI artifacts with the Plugin Display Name for Apache Kafka.
+upstream: https://github.com/example/project
+image: ghcr.io/oci-plugins-for-apache-kafka/plugin-id

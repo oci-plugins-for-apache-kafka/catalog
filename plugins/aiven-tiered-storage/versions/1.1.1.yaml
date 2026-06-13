@@ -1,0 +1,50 @@
+version: 1.1.1
+images:
+  - id: filesystem
+    tags:
+      - 1.1.1-filesystem
+    artifacts:
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/core-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/filesystem-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: s3
+    tags:
+      - 1.1.1-s3
+    artifacts:
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/core-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/s3-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: gcs
+    tags:
+      - 1.1.1-gcs
+    artifacts:
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/core-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/gcs-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure
+    tags:
+      - 1.1.1-azure
+    artifacts:
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/core-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1
+      - url: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka/releases/download/v1.1.1/azure-1.1.1.tgz
+        extract:
+          destination: /
+          stripComponents: 1

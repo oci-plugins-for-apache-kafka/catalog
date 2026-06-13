@@ -1,0 +1,5 @@
+id: aiven-tiered-storage
+name: Aiven Tiered Storage plugins for Apache Kafka
+description: OCI artifacts with the Aiven tiered storage plugins for Apache Kafka.
+upstream: https://github.com/Aiven-Open/tiered-storage-for-apache-kafka
+image: ghcr.io/oci-plugins-for-apache-kafka/aiven-tiered-storage

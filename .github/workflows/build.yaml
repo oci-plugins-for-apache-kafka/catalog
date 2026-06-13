@@ -1,0 +1,153 @@
+name: Build Plugin Images
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      plugin:
+        description: Plugin id to rebuild. Required unless rebuild_all is true.
+        required: false
+        type: string
+      version:
+        description: Plugin version to rebuild. Optional when plugin is set.
+        required: false
+        type: string
+      rebuild_all:
+        description: Rebuild every plugin version.
+        required: true
+        default: false
+        type: boolean
+      push_images:
+        description: Push images after a manual rebuild.
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install yq
+        run: |
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.45.1/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+          yq --version
+
+      - name: Validate catalog
+        run: bash scripts/validate-catalog.sh
+
+      - name: Check generated documentation
+        run: bash scripts/render-readmes.sh --check
+
+  detect:
+    name: Detect build targets
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.detect.outputs.matrix }}
+      has_changes: ${{ steps.detect.outputs.has_changes }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect changed plugin versions
+        id: detect
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+          DISPATCH_PLUGIN: ${{ inputs.plugin }}
+          DISPATCH_VERSION: ${{ inputs.version }}
+          DISPATCH_REBUILD_ALL: ${{ inputs.rebuild_all }}
+        run: |
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            if [[ "$DISPATCH_REBUILD_ALL" == "true" ]]; then
+              matrix=$(bash scripts/detect-changes.sh --all)
+            elif [[ -n "$DISPATCH_PLUGIN" ]]; then
+              args=(--plugin "$DISPATCH_PLUGIN")
+              if [[ -n "$DISPATCH_VERSION" ]]; then
+                args+=(--version "$DISPATCH_VERSION")
+              fi
+              matrix=$(bash scripts/detect-changes.sh "${args[@]}")
+            else
+              printf 'ERROR: workflow_dispatch requires plugin or rebuild_all=true.\n' >&2
+              exit 1
+            fi
+          elif [[ "$EVENT_NAME" == "pull_request" ]]; then
+            matrix=$(bash scripts/detect-changes.sh --base "$BASE_SHA" --head "$HEAD_SHA")
+          else
+            if [[ "$BEFORE_SHA" =~ ^0+$ ]]; then
+              matrix=$(bash scripts/detect-changes.sh --all)
+            else
+              matrix=$(bash scripts/detect-changes.sh --base "$BEFORE_SHA" --head "$CURRENT_SHA")
+            fi
+          fi
+
+          printf 'Detected build matrix: %s\n' "$matrix"
+          printf 'matrix=%s\n' "$matrix" >>"$GITHUB_OUTPUT"
+
+          if [[ "$matrix" == '{"include":[]}' ]]; then
+            printf 'has_changes=false\n' >>"$GITHUB_OUTPUT"
+          else
+            printf 'has_changes=true\n' >>"$GITHUB_OUTPUT"
+          fi
+
+  build:
+    name: Build ${{ matrix.plugin }} ${{ matrix.version }}
+    runs-on: ubuntu-latest
+    needs:
+      - validate
+      - detect
+    if: needs.detect.outputs.has_changes == 'true'
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.detect.outputs.matrix) }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install yq
+        run: |
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/download/v4.45.1/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+          yq --version
+
+      - name: Log in to GHCR
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.push_images)
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build plugin version
+        shell: bash
+        env:
+          PLUGIN: ${{ matrix.plugin }}
+          VERSION: ${{ matrix.version }}
+          PUSH_IMAGES: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.push_images) }}
+        run: |
+          args=()
+          if [[ "$PUSH_IMAGES" == "true" ]]; then
+            args+=(--push)
+          fi
+
+          bash scripts/build-plugin.sh "$PLUGIN" "$VERSION" "${args[@]}"

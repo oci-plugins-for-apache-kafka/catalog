@@ -1,0 +1,5 @@
+id: aws-msk-iam-auth
+name: Amazon MSK Library for AWS Identity and Access Management
+description: OCI artifacts with the Amazon MSK Library for AWS Identity and Access Management.
+upstream: https://github.com/aws/aws-msk-iam-auth
+image: ghcr.io/oci-plugins-for-apache-kafka/aws-msk-iam-auth
