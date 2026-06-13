@@ -40,12 +40,27 @@ image_list_for_plugin() {
   repository=$(yaml_get '.image' "$plugin_file")
 
   local first=true
+  local limit=8
+  local count=0
+  local total=0
   local version_file image_count image_index tag_count tag_index tag
+
+  for version_file in "plugins/$plugin"/versions/*.yaml; do
+    image_count=$(yaml_length '.images' "$version_file")
+    for ((image_index = 0; image_index < image_count; image_index++)); do
+      tag_count=$(yaml_length ".images[$image_index].tags" "$version_file")
+      total=$((total + tag_count))
+    done
+  done
+
   for version_file in "plugins/$plugin"/versions/*.yaml; do
     image_count=$(yaml_length '.images' "$version_file")
     for ((image_index = 0; image_index < image_count; image_index++)); do
       tag_count=$(yaml_length ".images[$image_index].tags" "$version_file")
       for ((tag_index = 0; tag_index < tag_count; tag_index++)); do
+        if [[ "$count" -ge "$limit" ]]; then
+          continue
+        fi
         tag=$(yaml_get ".images[$image_index].tags[$tag_index]" "$version_file")
         if [[ "$first" == true ]]; then
           first=false
@@ -53,9 +68,14 @@ image_list_for_plugin() {
           printf '<br>'
         fi
         printf '`%s:%s`' "$repository" "$tag"
+        count=$((count + 1))
       done
     done
   done
+
+  if [[ "$total" -gt "$limit" ]]; then
+    printf '<br>... and %s more' "$((total - limit))"
+  fi
 }
 
 render_catalog_table() {

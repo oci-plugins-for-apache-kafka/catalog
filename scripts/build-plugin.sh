@@ -4,7 +4,7 @@ set -euo pipefail
 usage() {
   cat <<'USAGE' >&2
 Usage:
-  build-plugin.sh <plugin> <version> [--push]
+  build-plugin.sh <plugin> <version> [--image <image>] [--push]
 
 Builds all image entries defined in plugins/<plugin>/versions/<version>.yaml.
 USAGE
@@ -112,9 +112,14 @@ plugin="$1"
 version="$2"
 shift 2
 push=false
+selected_image=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
+    --image)
+      selected_image="${2:-}"
+      shift 2
+      ;;
     --push)
       push=true
       shift
@@ -156,6 +161,7 @@ upstream=$(yaml_get '.upstream' "$plugin_file")
 manifest_version=$(yaml_get '.version' "$version_file")
 image_count=$(yaml_length '.images' "$version_file")
 work_dir=$(mktemp -d)
+matched_image=false
 
 cleanup() {
   rm -rf "$work_dir"
@@ -170,6 +176,12 @@ fi
 for ((image_index = 0; image_index < image_count; image_index++)); do
   image_prefix=".images[$image_index]"
   image_id=$(yaml_get "$image_prefix.id" "$version_file")
+
+  if [[ -n "$selected_image" && "$image_id" != "$selected_image" ]]; then
+    continue
+  fi
+
+  matched_image=true
   image_dir="$work_dir/$plugin-$version-$image_id-context"
   rootfs="$image_dir/rootfs"
   artifacts_dir="$work_dir/$plugin-$version-$image_id-artifacts"
@@ -238,3 +250,8 @@ DOCKERFILE
     done
   fi
 done
+
+if [[ -n "$selected_image" && "$matched_image" == false ]]; then
+  printf 'ERROR: image %s not found in %s\n' "$selected_image" "$version_file" >&2
+  exit 1
+fi

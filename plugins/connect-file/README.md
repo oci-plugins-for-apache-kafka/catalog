@@ -19,7 +19,7 @@ org.apache.kafka.connect.file.FileStreamSourceConnector
 org.apache.kafka.connect.file.FileStreamSinkConnector
 ```
 
-## Example Strimzi KafkaConnect Resource
+## Example Strimzi `KafkaConnect` Resource
 
 ```yaml
 kind: KafkaConnect

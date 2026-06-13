@@ -8,10 +8,25 @@ usage() {
 Usage:
   detect-changes.sh --base <ref> --head <ref>
   detect-changes.sh --all
-  detect-changes.sh --plugin <plugin> [--version <version>]
+  detect-changes.sh --plugin <plugin> [--version <version>] [--image <image>]
 
 Outputs a GitHub Actions matrix as compact JSON.
 USAGE
+}
+
+require_command() {
+  if ! command -v "$1" >/dev/null 2>&1; then
+    printf 'ERROR: required command not found: %s\n' "$1" >&2
+    exit 1
+  fi
+}
+
+yaml_get() {
+  yq e "$1 // \"\"" "$2"
+}
+
+yaml_length() {
+  yq e "$1 // [] | length" "$2"
 }
 
 pairs_file=$(mktemp)
@@ -27,6 +42,7 @@ base_ref=""
 head_ref=""
 plugin=""
 version=""
+image=""
 all=false
 
 while [[ $# -gt 0 ]]; do
@@ -47,6 +63,10 @@ while [[ $# -gt 0 ]]; do
       version="${2:-}"
       shift 2
       ;;
+    --image)
+      image="${2:-}"
+      shift 2
+      ;;
     --all)
       all=true
       shift
@@ -63,9 +83,10 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-add_pair() {
+add_target() {
   local pair_plugin="$1"
   local pair_version="$2"
+  local pair_image="$3"
   local version_file="plugins/$pair_plugin/versions/$pair_version.yaml"
 
   if [[ ! -f "$version_file" ]]; then
@@ -73,7 +94,35 @@ add_pair() {
     exit 1
   fi
 
-  printf '%s\t%s\n' "$pair_plugin" "$pair_version" >>"$pairs_file"
+  printf '%s\t%s\t%s\n' "$pair_plugin" "$pair_version" "$pair_image" >>"$pairs_file"
+}
+
+add_version_images() {
+  local pair_plugin="$1"
+  local pair_version="$2"
+  local selected_image="${3:-}"
+  local version_file="plugins/$pair_plugin/versions/$pair_version.yaml"
+
+  if [[ ! -f "$version_file" ]]; then
+    printf 'ERROR: version manifest not found: %s\n' "$version_file" >&2
+    exit 1
+  fi
+
+  local image_count image_index image_id matched=false
+  image_count=$(yaml_length '.images' "$version_file")
+
+  for ((image_index = 0; image_index < image_count; image_index++)); do
+    image_id=$(yaml_get ".images[$image_index].id" "$version_file")
+    if [[ -z "$selected_image" || "$selected_image" == "$image_id" ]]; then
+      add_target "$pair_plugin" "$pair_version" "$image_id"
+      matched=true
+    fi
+  done
+
+  if [[ -n "$selected_image" && "$matched" == false ]]; then
+    printf 'ERROR: image %s not found in %s\n' "$selected_image" "$version_file" >&2
+    exit 1
+  fi
 }
 
 add_plugin_versions() {
@@ -87,7 +136,7 @@ add_plugin_versions() {
 
   local version_file
   for version_file in "${version_files[@]}"; do
-    add_pair "$pair_plugin" "$(basename "$version_file" .yaml)"
+    add_version_images "$pair_plugin" "$(basename "$version_file" .yaml)"
   done
 }
 
@@ -98,7 +147,7 @@ add_all_versions() {
   for version_file in "${version_files[@]}"; do
     pair_plugin=$(basename "$(dirname "$(dirname "$version_file")")")
     pair_version=$(basename "$version_file" .yaml)
-    add_pair "$pair_plugin" "$pair_version"
+    add_version_images "$pair_plugin" "$pair_version"
   done
 }
 
@@ -113,7 +162,7 @@ detect_from_diff() {
         if [[ "$root" == 'plugins' && "$second" == 'versions' && -z "${rest:-}" ]]; then
           version_name=$(basename "$third" .yaml)
           if [[ -f "plugins/$plugin_dir/versions/$version_name.yaml" ]]; then
-            add_pair "$plugin_dir" "$version_name"
+            add_version_images "$plugin_dir" "$version_name"
           fi
         fi
         ;;
@@ -141,26 +190,32 @@ write_matrix() {
   fi
 
   local first=true
-  local pair_plugin pair_version
+  local pair_plugin pair_version pair_image
 
   printf '{"include":['
-  while IFS=$'\t' read -r pair_plugin pair_version; do
+  while IFS=$'\t' read -r pair_plugin pair_version pair_image; do
     if [[ "$first" == true ]]; then
       first=false
     else
       printf ','
     fi
-    printf '{"plugin":"%s","version":"%s"}' "$pair_plugin" "$pair_version"
+    printf '{"plugin":"%s","version":"%s","image":"%s"}' "$pair_plugin" "$pair_version" "$pair_image"
   done <"$sorted_file"
   printf ']}\n'
 }
+
+require_command yq
 
 if [[ "$all" == true ]]; then
   add_all_versions
 elif [[ -n "$plugin" ]]; then
   if [[ -n "$version" ]]; then
-    add_pair "$plugin" "$version"
+    add_version_images "$plugin" "$version" "$image"
   else
+    if [[ -n "$image" ]]; then
+      printf 'ERROR: --image requires --version.\n' >&2
+      exit 1
+    fi
     add_plugin_versions "$plugin"
   fi
 else
