@@ -1,0 +1,5 @@
+id: camel-kafka-connectors
+name: Apache Camel Kafka Connect connectors
+description: OCI artifacts with Apache Camel Kafka Connect connector packages.
+upstream: https://github.com/apache/camel-kafka-connector
+image: ghcr.io/oci-plugins-for-apache-kafka/camel-kafka-connectors

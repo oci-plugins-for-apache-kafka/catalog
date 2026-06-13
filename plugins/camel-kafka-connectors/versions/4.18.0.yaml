@@ -1,0 +1,1546 @@
+version: 4.18.0
+images:
+  - id: aws-bedrock-agent-runtime-sink
+    tags:
+      - 4.18.0-aws-bedrock-agent-runtime-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-bedrock-agent-runtime-sink-kafka-connector/4.18.0/camel-aws-bedrock-agent-runtime-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-bedrock-text-sink
+    tags:
+      - 4.18.0-aws-bedrock-text-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-bedrock-text-sink-kafka-connector/4.18.0/camel-aws-bedrock-text-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-cloudtrail-source
+    tags:
+      - 4.18.0-aws-cloudtrail-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-cloudtrail-source-kafka-connector/4.18.0/camel-aws-cloudtrail-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-cloudwatch-sink
+    tags:
+      - 4.18.0-aws-cloudwatch-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-cloudwatch-sink-kafka-connector/4.18.0/camel-aws-cloudwatch-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-comprehend-sink
+    tags:
+      - 4.18.0-aws-comprehend-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-comprehend-sink-kafka-connector/4.18.0/camel-aws-comprehend-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-ddb-sink
+    tags:
+      - 4.18.0-aws-ddb-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-ddb-sink-kafka-connector/4.18.0/camel-aws-ddb-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-ddb-streams-source
+    tags:
+      - 4.18.0-aws-ddb-streams-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-ddb-streams-source-kafka-connector/4.18.0/camel-aws-ddb-streams-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-ec2-sink
+    tags:
+      - 4.18.0-aws-ec2-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-ec2-sink-kafka-connector/4.18.0/camel-aws-ec2-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-eventbridge-sink
+    tags:
+      - 4.18.0-aws-eventbridge-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-eventbridge-sink-kafka-connector/4.18.0/camel-aws-eventbridge-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-kinesis-firehose-sink
+    tags:
+      - 4.18.0-aws-kinesis-firehose-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-kinesis-firehose-sink-kafka-connector/4.18.0/camel-aws-kinesis-firehose-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-kinesis-sink
+    tags:
+      - 4.18.0-aws-kinesis-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-kinesis-sink-kafka-connector/4.18.0/camel-aws-kinesis-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-kinesis-source
+    tags:
+      - 4.18.0-aws-kinesis-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-kinesis-source-kafka-connector/4.18.0/camel-aws-kinesis-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-lambda-sink
+    tags:
+      - 4.18.0-aws-lambda-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-lambda-sink-kafka-connector/4.18.0/camel-aws-lambda-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-polly-sink
+    tags:
+      - 4.18.0-aws-polly-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-polly-sink-kafka-connector/4.18.0/camel-aws-polly-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-redshift-sink
+    tags:
+      - 4.18.0-aws-redshift-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-redshift-sink-kafka-connector/4.18.0/camel-aws-redshift-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-redshift-source
+    tags:
+      - 4.18.0-aws-redshift-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-redshift-source-kafka-connector/4.18.0/camel-aws-redshift-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-s3-event-based-source
+    tags:
+      - 4.18.0-aws-s3-event-based-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-s3-event-based-source-kafka-connector/4.18.0/camel-aws-s3-event-based-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-s3-sink
+    tags:
+      - 4.18.0-aws-s3-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-s3-sink-kafka-connector/4.18.0/camel-aws-s3-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-s3-source
+    tags:
+      - 4.18.0-aws-s3-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-s3-source-kafka-connector/4.18.0/camel-aws-s3-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-s3-streaming-upload-sink
+    tags:
+      - 4.18.0-aws-s3-streaming-upload-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-s3-streaming-upload-sink-kafka-connector/4.18.0/camel-aws-s3-streaming-upload-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-secrets-manager-sink
+    tags:
+      - 4.18.0-aws-secrets-manager-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-secrets-manager-sink-kafka-connector/4.18.0/camel-aws-secrets-manager-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-ses-sink
+    tags:
+      - 4.18.0-aws-ses-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-ses-sink-kafka-connector/4.18.0/camel-aws-ses-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-sns-fifo-sink
+    tags:
+      - 4.18.0-aws-sns-fifo-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-sns-fifo-sink-kafka-connector/4.18.0/camel-aws-sns-fifo-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-sns-sink
+    tags:
+      - 4.18.0-aws-sns-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-sns-sink-kafka-connector/4.18.0/camel-aws-sns-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-sqs-batch-sink
+    tags:
+      - 4.18.0-aws-sqs-batch-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-sqs-batch-sink-kafka-connector/4.18.0/camel-aws-sqs-batch-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-sqs-fifo-sink
+    tags:
+      - 4.18.0-aws-sqs-fifo-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-sqs-fifo-sink-kafka-connector/4.18.0/camel-aws-sqs-fifo-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-sqs-sink
+    tags:
+      - 4.18.0-aws-sqs-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-sqs-sink-kafka-connector/4.18.0/camel-aws-sqs-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-sqs-source
+    tags:
+      - 4.18.0-aws-sqs-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-sqs-source-kafka-connector/4.18.0/camel-aws-sqs-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws-timestream-query-sink
+    tags:
+      - 4.18.0-aws-timestream-query-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws-timestream-query-sink-kafka-connector/4.18.0/camel-aws-timestream-query-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws2-iam
+    tags:
+      - 4.18.0-aws2-iam
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws2-iam-kafka-connector/4.18.0/camel-aws2-iam-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: aws2-kms
+    tags:
+      - 4.18.0-aws2-kms
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-aws2-kms-kafka-connector/4.18.0/camel-aws2-kms-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-cosmosdb-sink
+    tags:
+      - 4.18.0-azure-cosmosdb-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-cosmosdb-sink-kafka-connector/4.18.0/camel-azure-cosmosdb-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-cosmosdb-source
+    tags:
+      - 4.18.0-azure-cosmosdb-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-cosmosdb-source-kafka-connector/4.18.0/camel-azure-cosmosdb-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-eventhubs-sink
+    tags:
+      - 4.18.0-azure-eventhubs-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-eventhubs-sink-kafka-connector/4.18.0/camel-azure-eventhubs-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-eventhubs-source
+    tags:
+      - 4.18.0-azure-eventhubs-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-eventhubs-source-kafka-connector/4.18.0/camel-azure-eventhubs-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-functions-sink
+    tags:
+      - 4.18.0-azure-functions-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-functions-sink-kafka-connector/4.18.0/camel-azure-functions-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-servicebus-sink
+    tags:
+      - 4.18.0-azure-servicebus-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-servicebus-sink-kafka-connector/4.18.0/camel-azure-servicebus-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-servicebus-source
+    tags:
+      - 4.18.0-azure-servicebus-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-servicebus-source-kafka-connector/4.18.0/camel-azure-servicebus-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-blob-append-sink
+    tags:
+      - 4.18.0-azure-storage-blob-append-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-blob-append-sink-kafka-connector/4.18.0/camel-azure-storage-blob-append-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-blob-changefeed-source
+    tags:
+      - 4.18.0-azure-storage-blob-changefeed-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-blob-changefeed-source-kafka-connector/4.18.0/camel-azure-storage-blob-changefeed-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-blob-event-based-source
+    tags:
+      - 4.18.0-azure-storage-blob-event-based-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-blob-event-based-source-kafka-connector/4.18.0/camel-azure-storage-blob-event-based-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-blob-sink
+    tags:
+      - 4.18.0-azure-storage-blob-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-blob-sink-kafka-connector/4.18.0/camel-azure-storage-blob-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-blob-source
+    tags:
+      - 4.18.0-azure-storage-blob-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-blob-source-kafka-connector/4.18.0/camel-azure-storage-blob-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-datalake-sink
+    tags:
+      - 4.18.0-azure-storage-datalake-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-datalake-sink-kafka-connector/4.18.0/camel-azure-storage-datalake-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-datalake-source
+    tags:
+      - 4.18.0-azure-storage-datalake-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-datalake-source-kafka-connector/4.18.0/camel-azure-storage-datalake-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-files-sink
+    tags:
+      - 4.18.0-azure-storage-files-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-files-sink-kafka-connector/4.18.0/camel-azure-storage-files-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-files-source
+    tags:
+      - 4.18.0-azure-storage-files-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-files-source-kafka-connector/4.18.0/camel-azure-storage-files-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-queue-sink
+    tags:
+      - 4.18.0-azure-storage-queue-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-queue-sink-kafka-connector/4.18.0/camel-azure-storage-queue-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: azure-storage-queue-source
+    tags:
+      - 4.18.0-azure-storage-queue-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-azure-storage-queue-source-kafka-connector/4.18.0/camel-azure-storage-queue-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: bitcoin-source
+    tags:
+      - 4.18.0-bitcoin-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-bitcoin-source-kafka-connector/4.18.0/camel-bitcoin-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cassandra-sink
+    tags:
+      - 4.18.0-cassandra-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-cassandra-sink-kafka-connector/4.18.0/camel-cassandra-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cassandra-source
+    tags:
+      - 4.18.0-cassandra-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-cassandra-source-kafka-connector/4.18.0/camel-cassandra-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ceph-sink
+    tags:
+      - 4.18.0-ceph-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ceph-sink-kafka-connector/4.18.0/camel-ceph-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ceph-source
+    tags:
+      - 4.18.0-ceph-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ceph-source-kafka-connector/4.18.0/camel-ceph-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: chuck-norris-source
+    tags:
+      - 4.18.0-chuck-norris-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-chuck-norris-source-kafka-connector/4.18.0/camel-chuck-norris-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: couchbase-sink
+    tags:
+      - 4.18.0-couchbase-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-couchbase-sink-kafka-connector/4.18.0/camel-couchbase-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: counter-source
+    tags:
+      - 4.18.0-counter-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-counter-source-kafka-connector/4.18.0/camel-counter-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cron-source
+    tags:
+      - 4.18.0-cron-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-cron-source-kafka-connector/4.18.0/camel-cron-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cxf
+    tags:
+      - 4.18.0-cxf
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-cxf-kafka-connector/4.18.0/camel-cxf-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cxfrs
+    tags:
+      - 4.18.0-cxfrs
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-cxfrs-kafka-connector/4.18.0/camel-cxfrs-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: databricks-sink
+    tags:
+      - 4.18.0-databricks-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-databricks-sink-kafka-connector/4.18.0/camel-databricks-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: databricks-source
+    tags:
+      - 4.18.0-databricks-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-databricks-source-kafka-connector/4.18.0/camel-databricks-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: dropbox-sink
+    tags:
+      - 4.18.0-dropbox-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-dropbox-sink-kafka-connector/4.18.0/camel-dropbox-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: dropbox-source
+    tags:
+      - 4.18.0-dropbox-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-dropbox-source-kafka-connector/4.18.0/camel-dropbox-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: earthquake-source
+    tags:
+      - 4.18.0-earthquake-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-earthquake-source-kafka-connector/4.18.0/camel-earthquake-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: elasticsearch-index-sink
+    tags:
+      - 4.18.0-elasticsearch-index-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-elasticsearch-index-sink-kafka-connector/4.18.0/camel-elasticsearch-index-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: elasticsearch-search-source
+    tags:
+      - 4.18.0-elasticsearch-search-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-elasticsearch-search-source-kafka-connector/4.18.0/camel-elasticsearch-search-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: exec-sink
+    tags:
+      - 4.18.0-exec-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-exec-sink-kafka-connector/4.18.0/camel-exec-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: fhir-sink
+    tags:
+      - 4.18.0-fhir-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-fhir-sink-kafka-connector/4.18.0/camel-fhir-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: fhir-source
+    tags:
+      - 4.18.0-fhir-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-fhir-source-kafka-connector/4.18.0/camel-fhir-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: file
+    tags:
+      - 4.18.0-file
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-file-kafka-connector/4.18.0/camel-file-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: file-watch-source
+    tags:
+      - 4.18.0-file-watch-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-file-watch-source-kafka-connector/4.18.0/camel-file-watch-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ftp-sink
+    tags:
+      - 4.18.0-ftp-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ftp-sink-kafka-connector/4.18.0/camel-ftp-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ftp-source
+    tags:
+      - 4.18.0-ftp-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ftp-source-kafka-connector/4.18.0/camel-ftp-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ftps-sink
+    tags:
+      - 4.18.0-ftps-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ftps-sink-kafka-connector/4.18.0/camel-ftps-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ftps-source
+    tags:
+      - 4.18.0-ftps-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ftps-source-kafka-connector/4.18.0/camel-ftps-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: github-commit-source
+    tags:
+      - 4.18.0-github-commit-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-github-commit-source-kafka-connector/4.18.0/camel-github-commit-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: github-event-source
+    tags:
+      - 4.18.0-github-event-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-github-event-source-kafka-connector/4.18.0/camel-github-event-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: github-pullrequest-comment-source
+    tags:
+      - 4.18.0-github-pullrequest-comment-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-github-pullrequest-comment-source-kafka-connector/4.18.0/camel-github-pullrequest-comment-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: github-pullrequest-source
+    tags:
+      - 4.18.0-github-pullrequest-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-github-pullrequest-source-kafka-connector/4.18.0/camel-github-pullrequest-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: github-tag-source
+    tags:
+      - 4.18.0-github-tag-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-github-tag-source-kafka-connector/4.18.0/camel-github-tag-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-bigquery-sink
+    tags:
+      - 4.18.0-google-bigquery-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-bigquery-sink-kafka-connector/4.18.0/camel-google-bigquery-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-calendar-source
+    tags:
+      - 4.18.0-google-calendar-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-calendar-source-kafka-connector/4.18.0/camel-google-calendar-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-functions-sink
+    tags:
+      - 4.18.0-google-functions-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-functions-sink-kafka-connector/4.18.0/camel-google-functions-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-mail-source
+    tags:
+      - 4.18.0-google-mail-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-mail-source-kafka-connector/4.18.0/camel-google-mail-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-pubsub-sink
+    tags:
+      - 4.18.0-google-pubsub-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-pubsub-sink-kafka-connector/4.18.0/camel-google-pubsub-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-pubsub-source
+    tags:
+      - 4.18.0-google-pubsub-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-pubsub-source-kafka-connector/4.18.0/camel-google-pubsub-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-sheets-sink
+    tags:
+      - 4.18.0-google-sheets-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-sheets-sink-kafka-connector/4.18.0/camel-google-sheets-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-sheets-source
+    tags:
+      - 4.18.0-google-sheets-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-sheets-source-kafka-connector/4.18.0/camel-google-sheets-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-storage-event-based-source
+    tags:
+      - 4.18.0-google-storage-event-based-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-storage-event-based-source-kafka-connector/4.18.0/camel-google-storage-event-based-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-storage-sink
+    tags:
+      - 4.18.0-google-storage-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-storage-sink-kafka-connector/4.18.0/camel-google-storage-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-storage-source
+    tags:
+      - 4.18.0-google-storage-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-storage-source-kafka-connector/4.18.0/camel-google-storage-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: google-vertexai-sink
+    tags:
+      - 4.18.0-google-vertexai-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-google-vertexai-sink-kafka-connector/4.18.0/camel-google-vertexai-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: graphql-sink
+    tags:
+      - 4.18.0-graphql-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-graphql-sink-kafka-connector/4.18.0/camel-graphql-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: http-secured-sink
+    tags:
+      - 4.18.0-http-secured-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-http-secured-sink-kafka-connector/4.18.0/camel-http-secured-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: http-secured-source
+    tags:
+      - 4.18.0-http-secured-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-http-secured-source-kafka-connector/4.18.0/camel-http-secured-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: http-sink
+    tags:
+      - 4.18.0-http-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-http-sink-kafka-connector/4.18.0/camel-http-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: http-source
+    tags:
+      - 4.18.0-http-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-http-source-kafka-connector/4.18.0/camel-http-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: https
+    tags:
+      - 4.18.0-https
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-https-kafka-connector/4.18.0/camel-https-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ibm-cos-sink
+    tags:
+      - 4.18.0-ibm-cos-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ibm-cos-sink-kafka-connector/4.18.0/camel-ibm-cos-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ibm-cos-source
+    tags:
+      - 4.18.0-ibm-cos-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ibm-cos-source-kafka-connector/4.18.0/camel-ibm-cos-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ibm-watson-language-sink
+    tags:
+      - 4.18.0-ibm-watson-language-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ibm-watson-language-sink-kafka-connector/4.18.0/camel-ibm-watson-language-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: infinispan-sink
+    tags:
+      - 4.18.0-infinispan-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-infinispan-sink-kafka-connector/4.18.0/camel-infinispan-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: infinispan-source
+    tags:
+      - 4.18.0-infinispan-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-infinispan-source-kafka-connector/4.18.0/camel-infinispan-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jdbc
+    tags:
+      - 4.18.0-jdbc
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jdbc-kafka-connector/4.18.0/camel-jdbc-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-amqp-10-sink
+    tags:
+      - 4.18.0-jms-amqp-10-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-amqp-10-sink-kafka-connector/4.18.0/camel-jms-amqp-10-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-amqp-10-source
+    tags:
+      - 4.18.0-jms-amqp-10-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-amqp-10-source-kafka-connector/4.18.0/camel-jms-amqp-10-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-apache-artemis-sink
+    tags:
+      - 4.18.0-jms-apache-artemis-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-apache-artemis-sink-kafka-connector/4.18.0/camel-jms-apache-artemis-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-apache-artemis-source
+    tags:
+      - 4.18.0-jms-apache-artemis-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-apache-artemis-source-kafka-connector/4.18.0/camel-jms-apache-artemis-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-ibm-mq-sink
+    tags:
+      - 4.18.0-jms-ibm-mq-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-ibm-mq-sink-kafka-connector/4.18.0/camel-jms-ibm-mq-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-ibm-mq-source
+    tags:
+      - 4.18.0-jms-ibm-mq-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-ibm-mq-source-kafka-connector/4.18.0/camel-jms-ibm-mq-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-pooled-apache-artemis-sink
+    tags:
+      - 4.18.0-jms-pooled-apache-artemis-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-pooled-apache-artemis-sink-kafka-connector/4.18.0/camel-jms-pooled-apache-artemis-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jms-pooled-apache-artemis-source
+    tags:
+      - 4.18.0-jms-pooled-apache-artemis-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-jms-pooled-apache-artemis-source-kafka-connector/4.18.0/camel-jms-pooled-apache-artemis-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-apicurio-registry-not-secured-sink
+    tags:
+      - 4.18.0-kafka-apicurio-registry-not-secured-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-apicurio-registry-not-secured-sink-kafka-connector/4.18.0/camel-kafka-apicurio-registry-not-secured-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-apicurio-registry-not-secured-source
+    tags:
+      - 4.18.0-kafka-apicurio-registry-not-secured-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-apicurio-registry-not-secured-source-kafka-connector/4.18.0/camel-kafka-apicurio-registry-not-secured-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-azure-schema-registry-sink
+    tags:
+      - 4.18.0-kafka-azure-schema-registry-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-azure-schema-registry-sink-kafka-connector/4.18.0/camel-kafka-azure-schema-registry-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-azure-schema-registry-source
+    tags:
+      - 4.18.0-kafka-azure-schema-registry-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-azure-schema-registry-source-kafka-connector/4.18.0/camel-kafka-azure-schema-registry-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-batch-apicurio-registry-not-secured-source
+    tags:
+      - 4.18.0-kafka-batch-apicurio-registry-not-secured-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-batch-apicurio-registry-not-secured-source-kafka-connector/4.18.0/camel-kafka-batch-apicurio-registry-not-secured-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-batch-apicurio-registry-source
+    tags:
+      - 4.18.0-kafka-batch-apicurio-registry-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-batch-apicurio-registry-source-kafka-connector/4.18.0/camel-kafka-batch-apicurio-registry-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-batch-azure-schema-registry-source
+    tags:
+      - 4.18.0-kafka-batch-azure-schema-registry-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-batch-azure-schema-registry-source-kafka-connector/4.18.0/camel-kafka-batch-azure-schema-registry-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-batch-source
+    tags:
+      - 4.18.0-kafka-batch-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-batch-source-kafka-connector/4.18.0/camel-kafka-batch-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-not-secured-apicurio-registry-json-source
+    tags:
+      - 4.18.0-kafka-not-secured-apicurio-registry-json-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-not-secured-apicurio-registry-json-source-kafka-connector/4.18.0/camel-kafka-not-secured-apicurio-registry-json-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-not-secured-apicurio-registry-sink
+    tags:
+      - 4.18.0-kafka-not-secured-apicurio-registry-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-not-secured-apicurio-registry-sink-kafka-connector/4.18.0/camel-kafka-not-secured-apicurio-registry-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-not-secured-apicurio-registry-source
+    tags:
+      - 4.18.0-kafka-not-secured-apicurio-registry-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-not-secured-apicurio-registry-source-kafka-connector/4.18.0/camel-kafka-not-secured-apicurio-registry-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-sink
+    tags:
+      - 4.18.0-kafka-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-sink-kafka-connector/4.18.0/camel-kafka-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kafka-source
+    tags:
+      - 4.18.0-kafka-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kafka-source-kafka-connector/4.18.0/camel-kafka-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kubernetes-namespaces-source
+    tags:
+      - 4.18.0-kubernetes-namespaces-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kubernetes-namespaces-source-kafka-connector/4.18.0/camel-kubernetes-namespaces-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kubernetes-nodes-source
+    tags:
+      - 4.18.0-kubernetes-nodes-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kubernetes-nodes-source-kafka-connector/4.18.0/camel-kubernetes-nodes-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: kubernetes-pods-source
+    tags:
+      - 4.18.0-kubernetes-pods-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-kubernetes-pods-source-kafka-connector/4.18.0/camel-kubernetes-pods-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: log-sink
+    tags:
+      - 4.18.0-log-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-log-sink-kafka-connector/4.18.0/camel-log-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mail-imap-source
+    tags:
+      - 4.18.0-mail-imap-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mail-imap-source-kafka-connector/4.18.0/camel-mail-imap-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mail-sink
+    tags:
+      - 4.18.0-mail-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mail-sink-kafka-connector/4.18.0/camel-mail-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mariadb-sink
+    tags:
+      - 4.18.0-mariadb-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mariadb-sink-kafka-connector/4.18.0/camel-mariadb-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mariadb-source
+    tags:
+      - 4.18.0-mariadb-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mariadb-source-kafka-connector/4.18.0/camel-mariadb-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: minio-sink
+    tags:
+      - 4.18.0-minio-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-minio-sink-kafka-connector/4.18.0/camel-minio-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: minio-source
+    tags:
+      - 4.18.0-minio-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-minio-source-kafka-connector/4.18.0/camel-minio-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mongodb-changes-stream-source
+    tags:
+      - 4.18.0-mongodb-changes-stream-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mongodb-changes-stream-source-kafka-connector/4.18.0/camel-mongodb-changes-stream-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mongodb-sink
+    tags:
+      - 4.18.0-mongodb-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mongodb-sink-kafka-connector/4.18.0/camel-mongodb-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mongodb-source
+    tags:
+      - 4.18.0-mongodb-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mongodb-source-kafka-connector/4.18.0/camel-mongodb-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mqtt-sink
+    tags:
+      - 4.18.0-mqtt-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mqtt-sink-kafka-connector/4.18.0/camel-mqtt-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mqtt-source
+    tags:
+      - 4.18.0-mqtt-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mqtt-source-kafka-connector/4.18.0/camel-mqtt-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mqtt5-sink
+    tags:
+      - 4.18.0-mqtt5-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mqtt5-sink-kafka-connector/4.18.0/camel-mqtt5-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mqtt5-source
+    tags:
+      - 4.18.0-mqtt5-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mqtt5-source-kafka-connector/4.18.0/camel-mqtt5-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mysql-sink
+    tags:
+      - 4.18.0-mysql-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mysql-sink-kafka-connector/4.18.0/camel-mysql-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mysql-source
+    tags:
+      - 4.18.0-mysql-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-mysql-source-kafka-connector/4.18.0/camel-mysql-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: nats-sink
+    tags:
+      - 4.18.0-nats-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-nats-sink-kafka-connector/4.18.0/camel-nats-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: nats-source
+    tags:
+      - 4.18.0-nats-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-nats-source-kafka-connector/4.18.0/camel-nats-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: netty-http
+    tags:
+      - 4.18.0-netty-http
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-netty-http-kafka-connector/4.18.0/camel-netty-http-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: netty
+    tags:
+      - 4.18.0-netty
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-netty-kafka-connector/4.18.0/camel-netty-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: opensearch-index-sink
+    tags:
+      - 4.18.0-opensearch-index-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-opensearch-index-sink-kafka-connector/4.18.0/camel-opensearch-index-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: opensearch-search-source
+    tags:
+      - 4.18.0-opensearch-search-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-opensearch-search-source-kafka-connector/4.18.0/camel-opensearch-search-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: oracle-database-sink
+    tags:
+      - 4.18.0-oracle-database-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-oracle-database-sink-kafka-connector/4.18.0/camel-oracle-database-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: oracle-database-source
+    tags:
+      - 4.18.0-oracle-database-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-oracle-database-source-kafka-connector/4.18.0/camel-oracle-database-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: postgresql-sink
+    tags:
+      - 4.18.0-postgresql-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-postgresql-sink-kafka-connector/4.18.0/camel-postgresql-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: postgresql-source
+    tags:
+      - 4.18.0-postgresql-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-postgresql-source-kafka-connector/4.18.0/camel-postgresql-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: pulsar-sink
+    tags:
+      - 4.18.0-pulsar-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-pulsar-sink-kafka-connector/4.18.0/camel-pulsar-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: pulsar-source
+    tags:
+      - 4.18.0-pulsar-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-pulsar-source-kafka-connector/4.18.0/camel-pulsar-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: redis-sink
+    tags:
+      - 4.18.0-redis-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-redis-sink-kafka-connector/4.18.0/camel-redis-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: redis-source
+    tags:
+      - 4.18.0-redis-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-redis-source-kafka-connector/4.18.0/camel-redis-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: rest-openapi-sink
+    tags:
+      - 4.18.0-rest-openapi-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-rest-openapi-sink-kafka-connector/4.18.0/camel-rest-openapi-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: salesforce-composite-upsert-sink
+    tags:
+      - 4.18.0-salesforce-composite-upsert-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-salesforce-composite-upsert-sink-kafka-connector/4.18.0/camel-salesforce-composite-upsert-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: salesforce-create-sink
+    tags:
+      - 4.18.0-salesforce-create-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-salesforce-create-sink-kafka-connector/4.18.0/camel-salesforce-create-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: salesforce-delete-sink
+    tags:
+      - 4.18.0-salesforce-delete-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-salesforce-delete-sink-kafka-connector/4.18.0/camel-salesforce-delete-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: salesforce-source
+    tags:
+      - 4.18.0-salesforce-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-salesforce-source-kafka-connector/4.18.0/camel-salesforce-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: salesforce-update-sink
+    tags:
+      - 4.18.0-salesforce-update-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-salesforce-update-sink-kafka-connector/4.18.0/camel-salesforce-update-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: scp-sink
+    tags:
+      - 4.18.0-scp-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-scp-sink-kafka-connector/4.18.0/camel-scp-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: sftp-sink
+    tags:
+      - 4.18.0-sftp-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-sftp-sink-kafka-connector/4.18.0/camel-sftp-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: sftp-source
+    tags:
+      - 4.18.0-sftp-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-sftp-source-kafka-connector/4.18.0/camel-sftp-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: sjms2
+    tags:
+      - 4.18.0-sjms2
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-sjms2-kafka-connector/4.18.0/camel-sjms2-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: slack-sink
+    tags:
+      - 4.18.0-slack-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-slack-sink-kafka-connector/4.18.0/camel-slack-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: slack-source
+    tags:
+      - 4.18.0-slack-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-slack-source-kafka-connector/4.18.0/camel-slack-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: snowflake-sink
+    tags:
+      - 4.18.0-snowflake-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-snowflake-sink-kafka-connector/4.18.0/camel-snowflake-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: snowflake-source
+    tags:
+      - 4.18.0-snowflake-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-snowflake-source-kafka-connector/4.18.0/camel-snowflake-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: solr-sink
+    tags:
+      - 4.18.0-solr-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-solr-sink-kafka-connector/4.18.0/camel-solr-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: solr-source
+    tags:
+      - 4.18.0-solr-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-solr-source-kafka-connector/4.18.0/camel-solr-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: splunk-hec-sink
+    tags:
+      - 4.18.0-splunk-hec-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-splunk-hec-sink-kafka-connector/4.18.0/camel-splunk-hec-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: splunk-sink
+    tags:
+      - 4.18.0-splunk-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-splunk-sink-kafka-connector/4.18.0/camel-splunk-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: splunk-source
+    tags:
+      - 4.18.0-splunk-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-splunk-source-kafka-connector/4.18.0/camel-splunk-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: spring-rabbitmq-sink
+    tags:
+      - 4.18.0-spring-rabbitmq-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-spring-rabbitmq-sink-kafka-connector/4.18.0/camel-spring-rabbitmq-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: spring-rabbitmq-source
+    tags:
+      - 4.18.0-spring-rabbitmq-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-spring-rabbitmq-source-kafka-connector/4.18.0/camel-spring-rabbitmq-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: sqlserver-sink
+    tags:
+      - 4.18.0-sqlserver-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-sqlserver-sink-kafka-connector/4.18.0/camel-sqlserver-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: sqlserver-source
+    tags:
+      - 4.18.0-sqlserver-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-sqlserver-source-kafka-connector/4.18.0/camel-sqlserver-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ssh-sink
+    tags:
+      - 4.18.0-ssh-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ssh-sink-kafka-connector/4.18.0/camel-ssh-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ssh-source
+    tags:
+      - 4.18.0-ssh-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-ssh-source-kafka-connector/4.18.0/camel-ssh-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: syslog
+    tags:
+      - 4.18.0-syslog
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-syslog-kafka-connector/4.18.0/camel-syslog-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: telegram-sink
+    tags:
+      - 4.18.0-telegram-sink
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-telegram-sink-kafka-connector/4.18.0/camel-telegram-sink-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: telegram-source
+    tags:
+      - 4.18.0-telegram-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-telegram-source-kafka-connector/4.18.0/camel-telegram-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: timer-source
+    tags:
+      - 4.18.0-timer-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-timer-source-kafka-connector/4.18.0/camel-timer-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: twitter-directmessage-source
+    tags:
+      - 4.18.0-twitter-directmessage-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-twitter-directmessage-source-kafka-connector/4.18.0/camel-twitter-directmessage-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: twitter-search-source
+    tags:
+      - 4.18.0-twitter-search-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-twitter-search-source-kafka-connector/4.18.0/camel-twitter-search-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: twitter-timeline-source
+    tags:
+      - 4.18.0-twitter-timeline-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-twitter-timeline-source-kafka-connector/4.18.0/camel-twitter-timeline-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: webhook-source
+    tags:
+      - 4.18.0-webhook-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-webhook-source-kafka-connector/4.18.0/camel-webhook-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: wttrin-source
+    tags:
+      - 4.18.0-wttrin-source
+    artifacts:
+      - url: https://repo1.maven.org/maven2/org/apache/camel/kafkaconnector/camel-wttrin-source-kafka-connector/4.18.0/camel-wttrin-source-kafka-connector-4.18.0-package.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
