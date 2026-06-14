@@ -1,0 +1,146 @@
+version: 3.5.2.Final
+images:
+  - id: cassandra-3
+    tags:
+      - 3.5.2.Final-cassandra-3
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-cassandra-3/3.5.2.Final/debezium-connector-cassandra-3-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cassandra-4
+    tags:
+      - 3.5.2.Final-cassandra-4
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-cassandra-4/3.5.2.Final/debezium-connector-cassandra-4-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cassandra-5
+    tags:
+      - 3.5.2.Final-cassandra-5
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-cassandra-5/3.5.2.Final/debezium-connector-cassandra-5-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: cockroachdb
+    tags:
+      - 3.5.2.Final-cockroachdb
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-cockroachdb/3.5.2.Final/debezium-connector-cockroachdb-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: db2
+    tags:
+      - 3.5.2.Final-db2
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-db2/3.5.2.Final/debezium-connector-db2-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: dse
+    tags:
+      - 3.5.2.Final-dse
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-dse/3.5.2.Final/debezium-connector-dse-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ibmi
+    tags:
+      - 3.5.2.Final-ibmi
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-ibmi/3.5.2.Final/debezium-connector-ibmi-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: informix
+    tags:
+      - 3.5.2.Final-informix
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-informix/3.5.2.Final/debezium-connector-informix-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: ingres
+    tags:
+      - 3.5.2.Final-ingres
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-ingres/3.5.2.Final/debezium-connector-ingres-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: jdbc
+    tags:
+      - 3.5.2.Final-jdbc
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-jdbc/3.5.2.Final/debezium-connector-jdbc-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mariadb
+    tags:
+      - 3.5.2.Final-mariadb
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-mariadb/3.5.2.Final/debezium-connector-mariadb-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mongodb
+    tags:
+      - 3.5.2.Final-mongodb
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-mongodb/3.5.2.Final/debezium-connector-mongodb-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: mysql
+    tags:
+      - 3.5.2.Final-mysql
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-mysql/3.5.2.Final/debezium-connector-mysql-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: oracle
+    tags:
+      - 3.5.2.Final-oracle
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-oracle/3.5.2.Final/debezium-connector-oracle-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: postgres
+    tags:
+      - 3.5.2.Final-postgres
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/3.5.2.Final/debezium-connector-postgres-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: spanner
+    tags:
+      - 3.5.2.Final-spanner
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-spanner/3.5.2.Final/debezium-connector-spanner-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: sqlserver
+    tags:
+      - 3.5.2.Final-sqlserver
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-sqlserver/3.5.2.Final/debezium-connector-sqlserver-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1
+  - id: vitess
+    tags:
+      - 3.5.2.Final-vitess
+    artifacts:
+      - url: https://repo1.maven.org/maven2/io/debezium/debezium-connector-vitess/3.5.2.Final/debezium-connector-vitess-3.5.2.Final-plugin.tar.gz
+        extract:
+          destination: /
+          stripComponents: 1

@@ -1,0 +1,5 @@
+id: debezium-connectors
+name: Debezium connectors
+description: OCI artifacts with Debezium Kafka Connect connector plugin packages.
+upstream: https://github.com/debezium/debezium
+image: ghcr.io/oci-plugins-for-apache-kafka/debezium-connectors
